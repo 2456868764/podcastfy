@@ -28,5 +28,6 @@ if __name__ == "__main__":
 
     os.environ['OPENAI_API_KEY'] = 'sk-xxxx'
     os.environ['OPENAI_BASE_URL'] = "http://127.0.0.1:9000/v1"
-    audio_file = generate_podcast(text=text, tts_model="openai", api_key_label="OPENAI_API_KEY",
-                                  llm_model_name="gpt-4o")
+    transcript_file = generate_podcast(text=text, tts_model="openai", api_key_label="OPENAI_API_KEY",
+                                  llm_model_name="gpt-4o", transcript_only=True)
+    print(transcript_file)
