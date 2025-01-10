@@ -17,6 +17,8 @@ from langchain_community.llms.llamafile import Llamafile
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain import hub
+from langchain_openai import ChatOpenAI
+
 from podcastfy.utils.config_conversation import load_conversation_config
 from podcastfy.utils.config import load_config
 import logging
@@ -66,6 +68,14 @@ class LLMBackend:
                 api_key=os.environ["GEMINI_API_KEY"],
                 model=model_name,
                 max_output_tokens=max_output_tokens,
+                **common_params,
+            )
+        elif "gpt-" in self.model_name.lower():
+            self.llm = ChatOpenAI(
+                model=model_name,
+                max_tokens=max_output_tokens,
+                base_url=os.environ["OPENAI_BASE_URL"],
+                api_key=os.environ[api_key_label],
                 **common_params,
             )
         else:  # user should set api_key_label from input
