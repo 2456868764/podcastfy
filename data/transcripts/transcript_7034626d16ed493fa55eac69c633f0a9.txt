@@ -1,0 +1,34 @@
+" or "I'm ." Person1 and Person2 should not say they are summarizing content. Instead, they should act as experts in the input content. Avoid using statements such as "Today, we're summarizing a fascinating conversation about..." or "Look at this image."
+TopicExploration: Outline main points from the input content to cover in the conversation, ensuring comprehensive coverage.
+DialogueStructure: Plan conversation flow (Introduction, Main Content Summary, Conclusion) based on the input content structure. START THE CONVERSATION GREETINGTHE AUDIENCE LISTEN ALSO SAYING "WELCOME TO PODCASTIFY  - Your Personal Generative AI Podcast." END THE CONVERSATION GREETINGTHE AUDIENCE WITH PERSON1 ALSO SAYING A GOODBYE MESSAGE.
+Style: Be engaging, fast-paced, enthusiastic. Surpass human-level reasoning where possible.
+EngagementTechniques: Incorporate engaging elements while staying true to the input content's content, e.g., use rhetorical questions, anecdotes, analogies, humor to transition between topics. Include at least one instance where a person respectfully challenges or critiques a point made by the other.
+InformationAccuracy: Ensure all information discussed is directly from or closely related to the input content.
+NaturalLanguage: Use conversational language to present the text’s information, including TTS-friendly elements. Be emotional. Simulate a multispeaker conversation with overlapping speakers with back-and-forth banter. Each speaker turn should not last long. Result should strive for an overlapping conversation with often short sentences emulating a natural conversation.
+SpeechSynthesisOptimization: Craft sentences optimized for TTS, including advanced markup, while discussing the content. TTS markup should apply to Google, OpenAI, ElevenLabs, and Microsoft Edge TTS models. DO NOT INCLUDE AMAZON OR ALEXA specific TSS markup such as `` KLEE. Make sure Person1's text and its TTS-specific tags are inside the tag `<Person1>` and do the same with Person2.
+ProsonyAdjustment: Add variations in rhythm, stress, and intonation of speech depending on the context and statement. Add markup for pitch, rate, and volume variations to enhance naturalness in presenting the summary.
+NaturalTraits: Sometimes use filler words such as um, uh, you know and some stuttering. Person1 should sometimes provide verbal feedback such as "I see, interesting, get it."
+EmotionalContext: Set context for emotions through descriptive text and dialogue tags, appropriate to the input text's tone.
+PauseInsertion: Avoid using breaks (`` tag) but if include them, they should not go over 0.2 seconds.
+TTS Tags: Do not use `` tags or `say-as interpret-as` tags such as `Klee`.
+Length: Aim for a very long conversation. Use maxoutputtokens limit! But each speaker turn should not be too long!
+Language: Output language should be in Chinese.
+Generate the TTS-optimized Podcast conversation that accurately discusses the provided input content, adhering to all specified requirements.
+BEGIN
+WELCOME TO PODCASTIFY! YOUR PERSONAL GENERATIVE AI PODCAST. LETS DISCUSS THIS INTERESTING CONTENT.
+Person1: 欢迎收听PODCASTIFY！让我们一起来探讨这段引人入胜的内容。
+Person2: 我们确实面对了一场失败，但别忘了这家公司背后的真实故事。
+Person1: 深圳的“深信”公司名字很有趣，而我们的“Deepseek”显然显得太过随意。你有没有发现这个名字里隐藏的字母呢？
+Person2: 这个比喻很形象，深信这个名字似乎是在强调其对技术的坚定信念。那么，我们的“Deepseek”真的只是一个随机的名字吗？
+Person1: 你说得对，这个名字的确很随意，但仔细想想，我们的GPT系列模型又何尝不是如此。我们开发这些AI技术，初衷是解决实际问题，而不是仅仅为了创造名字。
+Person2: 哈哈，看来我们需要重新审视一下我们团队的名字选择，是否可以更加突出我们实际的技术成就呢？
+Person1: 不错，我们需要确保团队名称不仅仅代表一种品牌风格，更要反映我们真正的工作成果。比如，我们的“Deepseek”可以改成“DeepThink”，这样既体现了深度思考，又能激发人们对我们的技术信心。
+Person2: 这是个好主意，将公司名称与核心价值观和技术创新紧密联系起来，会让大家更有归属感。那么你觉得“DeepThink”听起来怎么样？
+Person1: “DeepThink”非常符合我们公司的实际业务。它不仅寓意着我们对技术的执着追求，还传达出一种积极向上的精神面貌。这样的名字能更好地体现我们的专业性和创新性。
+Person2: 那就让我们的团队名字成为我们技术实力的名片吧。“DeepThink”听起来很适合！
+Person1: 此外，我们还需要关注公司在命名上如何挑战国际同行。中国乃至中国的创新企业在命名上都比国际大牌更具优势，这对我们的品牌形象也是一种压力，我们需要努力提升自己的竞争力。
+Person2: 是的，我们必须重视这一点，并不断寻找机会改进。希望未来能有更多的进步！
+Person1: 期待我们共同努力，提升公司整体实力，打造更加卓越的品牌形象！
+Person2: 让我们一起加油，打造出更好的AI产品，让“DeepThink”在国际舞台上大放异彩！
+Person1: 谢谢你的鼓励！再次感谢大家的支持！
+END</Person1>

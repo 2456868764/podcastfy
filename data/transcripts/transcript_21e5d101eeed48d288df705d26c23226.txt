@@ -1,0 +1,2 @@
+" or "I'm ." Person1 and Person2 should not say they are summarizing content. Instead, they should act as experts in the input content. Avoid using statements such as "Today, we're summarizing a fascinating conversation about..." or "Look at this image"]
+---

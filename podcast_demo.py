@@ -28,6 +28,18 @@ if __name__ == "__main__":
 
     os.environ['OPENAI_API_KEY'] = 'sk-xxxx'
     os.environ['OPENAI_BASE_URL'] = "http://127.0.0.1:9000/v1"
-    transcript_file = generate_podcast(text=text, tts_model="openai", api_key_label="OPENAI_API_KEY",
-                                  llm_model_name="gpt-4o", transcript_only=True)
-    print(transcript_file)
+    # transcript_file = generate_podcast(text=text, tts_model="openai", api_key_label="OPENAI_API_KEY",
+    #                               llm_model_name="gpt-4o", transcript_only=True)
+    # print(transcript_file)
+
+    text = """
+    deepseek，deepseek we're getting our asses kicked by Deepseek who names an AI company after the
+thing it actually does 
+where are your random letters where's your GPT your Gro deep seek sounds like what you might use it for China is even beating us at naming
+    """
+    #
+    # text = "Deepseek，Deepseek，我们被Deepseek打得落花流水。谁会用一个AI公司实际做的事情来命名公司呢？你们的随机字母在哪里？你们的GPT在哪里？你们的Gro在哪里？Deepseek听起来就像你可能会用到的东西。中国甚至在公司命名上也打败了我们。"
+
+    audio_file = generate_podcast(text=text, tts_model="openai", api_key_label="OPENAI_API_KEY",
+                                       llm_model_name="gpt-4o")
+    print(audio_file)

@@ -1,8 +1,12 @@
 """OpenAI TTS provider implementation."""
+import os
 
 import openai
 from typing import List, Optional
 from ..base import TTSProvider
+from ...utils.logger import setup_logger
+
+logger = setup_logger(__name__)
 
 class OpenAITTS(TTSProvider):
     """OpenAI Text-to-Speech provider."""
@@ -22,6 +26,7 @@ class OpenAITTS(TTSProvider):
             openai.api_key = api_key
         elif not openai.api_key:
             raise ValueError("OpenAI API key must be provided or set in environment")
+        openai.api_base = os.getenv("OPENAI_BASE_URL", "https://api.openai.com/v1")
         self.model = model
             
     def get_supported_tags(self) -> List[str]:
@@ -33,6 +38,10 @@ class OpenAITTS(TTSProvider):
         self.validate_parameters(text, voice, model)
         
         try:
+            logger.info("start to generate audio")
+            logger.info(f"Generating audio for text: {text}")
+            logger.info(f"Using model: {model}")
+            logger.info(f"Using voice: {voice}")
             response = openai.audio.speech.create(
                 model=model,
                 voice=voice,
